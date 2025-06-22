@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free
+    branch: master
+    dockerfilePath: ./docker/images/n8n/Dockerfile
+    envVars:
+      - key: GENERIC_TIMEZONE
+        value: Asia/Kolkata
+      - key: N8N_HOST
+        value: n8n.onrender.com
+      - key: N8N_PORT
+        value: 5678
